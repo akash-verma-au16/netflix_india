@@ -1,0 +1,389 @@
+/* global */
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: #999;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+img {
+	width: 100%;
+}
+
+input {
+    height: 80px;
+    width: 500px;
+}
+
+/* container */
+.container {
+	max-width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* buttons */
+.btn {
+	display: inline-block;
+	background: var(--primary-color);
+	color: #fff;
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	transition: opacity 0.2s ease-in;
+	outline: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+	border-radius: 2px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn-rounded {
+	border-radius: 3px;
+}
+
+.btn-icon {
+	margin-left: 1rem;
+}
+
+
+/* showcase */
+.showcase {
+	width: 100%;
+	height: 100vh;
+    position: relative;
+	background: url("https://assets.nflxext.com/ffe/siteui/vlv3/70deccb9-9b6c-4be1-b781-18dd1bcd9264/570588d9-3fe5-4048-8fb2-460283476f0c/IN-en-20210301-popsignuptwoweeks-perspective_alpha_website_small.jpg") no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.60);   
+    box-shadow: -37px -89px 122px -49px rgba(0,0,0,1) inset,
+                -50px 69px 122px -49px rgba(0,0,0,1) inset;
+    -webkit-font-smoothing: antialiased;
+}
+
+.showcase-top {
+	position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+	z-index: 2;
+	height: 90px;
+}
+
+.showcase-top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 45px;
+    padding-top: 0.5rem;
+}
+
+.showcase-top img {
+    height: 45px;
+	width: 167px;
+}
+
+.showcase .lang-select {
+    margin-right: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: #fff;
+    font-size: 14px;
+    padding: 0.6rem 0;
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 3px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.showcase .lang-select div{
+    display: inline-block;
+}
+
+.showcase .lang-select .fa-globe {
+    font-size: 13px;
+    margin-left: 0.4rem;
+}
+
+.showcase .lang-select .fa-sort-down {
+    font-size: 18px;
+    margin-right: 0.1rem;
+    top: 50%;
+    transform: translateY(-12%);
+}
+
+.showcase-content {
+	position: relative;
+	z-index: 2;
+	margin: auto;
+    width: 80%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 9rem;
+}
+
+.showcase-content h1 {
+	font-weight: 600;
+	font-size: 4rem;
+	line-height: 1.1;
+	margin: 0 50px 20px;
+    padding: 0px 30px;
+}
+
+.showcase-content h2 {
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.625rem;
+	line-height: 1.1;
+	margin: 0 0 2rem;
+}
+
+.showcase-content h3 {
+    margin: 0 50px 20px;
+    padding: 0px 30px;
+    font-weight: 200;
+}
+
+.showcase-content > div,
+.section-4 .subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-content > div input, 
+.section-4 > div input {
+    padding: 0 10px;
+    height: 75px;
+    font-size: 16px;
+}
+
+.showcase-content > div a,
+.section-4 > div a {
+    display: flex;
+    align-items: center;
+    height: 71px;
+    padding: 0 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.showcase-content > div a i,
+.section-4 > div a i {
+    font-size: 25px;
+    margin: 0 5px 0 15px;
+}
+
+
+/* section */
+.section{
+    background-color: #000;
+    border-top: 10px solid #141414;
+}
+
+.flex-content{
+    display: flex;
+    flex: 1;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-content .message h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.flex-content .message p {
+    color: #fff;
+    font-size: 1.625rem;
+    width: 75%;
+}
+
+.flex-content .message-1,
+.flex-content .message-3 {
+    padding: 3rem;
+}
+
+.flex-content .message-2{
+    padding-left: 3rem;
+}
+
+.flex-content .graphic {
+    padding: 3rem 0;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    padding: 3rem;
+}
+
+.center h2 {
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+.center dl {
+    padding-bottom: 3rem;
+    text-align: left;
+    width: 75%;
+}
+
+.center dt,
+.center dd p {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #333; 
+    border: #333 1px solid;
+    padding: 20px;
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.center dt {
+    margin-top: 10px;
+}
+
+.center dd p {
+    margin-top: 2px;
+    display: none;
+	opacity: 0;
+}
+
+.show {
+    display: block !important;
+	opacity: 1 !important;
+}
+
+.center dt i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.toggle dt i {
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.center h3 {
+    margin-bottom: 15px;
+}
+
+/* footer */
+.footer {
+	max-width: 100%;
+	margin: 0 auto;
+    padding: 3rem 5rem;
+    border-top: 10px solid #141414;
+	overflow: auto;
+    color: rgba(153, 153, 153, 0.671);
+    background: rgba(0, 0, 0, 0.60); 
+}
+
+.footer-container{
+    max-width: 70%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.footer a {
+	color: rgba(153, 153, 153, 0.671);
+}
+
+.footer a:hover{
+    border-bottom: #999 2px solid;
+}
+
+.footer .footer-cols ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+    margin-bottom: 3rem;
+}
+
+.footer .footer-cols ul li a {
+    font-size: 12px;
+}
+
+.footer .lang-select {
+    background-color: rgba(0, 0, 0, 0.747);
+    color: rgba(255, 255, 255, 0.397);
+    font-size: 14px;
+    padding: 20px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    border-radius: 3px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.footer .lang-select div{
+    display: inline-block;
+}
+
+.footer .lang-select .fa-globe {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.footer .lang-select .fa-sort-down {
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-12%);
+    margin-left: 5px;
+}
+
+.footer div.text-1 {
+    margin-bottom: 3rem;
+}
+
+.footer div.text-2 {
+    font-size: 10px;
+    margin-top: 3rem;
+}
